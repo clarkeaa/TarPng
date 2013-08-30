@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		437F605417D0F94A00B27541 /* TarPng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TarPng.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		437F605417D0F94A00B27541 /* TarPngExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TarPngExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437F605717D0F94A00B27541 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		437F605A17D0F94A00B27541 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		437F605B17D0F94A00B27541 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -48,7 +48,7 @@
 		437F604B17D0F94A00B27541 = {
 			isa = PBXGroup;
 			children = (
-				437F605D17D0F94A00B27541 /* TarPng */,
+				437F605D17D0F94A00B27541 /* TarPngExample */,
 				437F605617D0F94A00B27541 /* Frameworks */,
 				437F605517D0F94A00B27541 /* Products */,
 			);
@@ -57,7 +57,7 @@
 		437F605517D0F94A00B27541 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				437F605417D0F94A00B27541 /* TarPng.app */,
+				437F605417D0F94A00B27541 /* TarPngExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		437F605D17D0F94A00B27541 /* TarPng */ = {
+		437F605D17D0F94A00B27541 /* TarPngExample */ = {
 			isa = PBXGroup;
 			children = (
 				437F607417D100FF00B27541 /* images.tar */,
@@ -90,7 +90,7 @@
 				437F606C17D0F94A00B27541 /* MainMenu.xib */,
 				437F605E17D0F94A00B27541 /* Supporting Files */,
 			);
-			path = TarPng;
+			path = TarPngExample;
 			sourceTree = "<group>";
 		};
 		437F605E17D0F94A00B27541 /* Supporting Files */ = {
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		437F605317D0F94A00B27541 /* TarPng */ = {
+		437F605317D0F94A00B27541 /* TarPngExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 437F607117D0F94A00B27541 /* Build configuration list for PBXNativeTarget "TarPng" */;
+			buildConfigurationList = 437F607117D0F94A00B27541 /* Build configuration list for PBXNativeTarget "TarPngExample" */;
 			buildPhases = (
 				437F605017D0F94A00B27541 /* Sources */,
 				437F605117D0F94A00B27541 /* Frameworks */,
@@ -120,9 +120,9 @@
 			);
 			dependencies = (
 			);
-			name = TarPng;
+			name = TarPngExample;
 			productName = TarPng;
-			productReference = 437F605417D0F94A00B27541 /* TarPng.app */;
+			productReference = 437F605417D0F94A00B27541 /* TarPngExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				437F605317D0F94A00B27541 /* TarPng */,
+				437F605317D0F94A00B27541 /* TarPngExample */,
 			);
 		};
 /* End PBXProject section */
@@ -267,8 +267,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TarPng/TarPng-Prefix.pch";
-				INFOPLIST_FILE = "TarPng/TarPng-Info.plist";
+				GCC_PREFIX_HEADER = "TarPngExample/TarPng-Prefix.pch";
+				INFOPLIST_FILE = "TarPngExample/TarPng-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -279,8 +279,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TarPng/TarPng-Prefix.pch";
-				INFOPLIST_FILE = "TarPng/TarPng-Info.plist";
+				GCC_PREFIX_HEADER = "TarPngExample/TarPng-Prefix.pch";
+				INFOPLIST_FILE = "TarPngExample/TarPng-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -298,7 +298,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		437F607117D0F94A00B27541 /* Build configuration list for PBXNativeTarget "TarPng" */ = {
+		437F607117D0F94A00B27541 /* Build configuration list for PBXNativeTarget "TarPngExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				437F607217D0F94A00B27541 /* Debug */,
