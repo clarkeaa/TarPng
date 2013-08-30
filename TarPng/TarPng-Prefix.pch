@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'TarPng' target in the 'TarPng' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
