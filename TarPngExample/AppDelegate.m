@@ -24,6 +24,7 @@
     NSLog(@"names:%@", arc.names);
     NSImage* nsimg = [arc imageNamed:@"Mushroom2.PNG"];
     self.imageView.image = nsimg;
+    [arc release];
 }
 
 @end

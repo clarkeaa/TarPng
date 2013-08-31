@@ -175,7 +175,7 @@ desiredSize:
                                                       size:NSMakeSize(CGImageGetWidth(img),
                                                                       CGImageGetHeight(img)) ];
         CGImageRelease(img);
-        return answer;
+        return [answer autorelease];
     } else {
         return nil;
     }
