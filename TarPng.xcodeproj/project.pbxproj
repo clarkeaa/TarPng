@@ -17,6 +17,8 @@
 		437F607B17D169C400B27541 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 437F605717D0F94A00B27541 /* Cocoa.framework */; };
 		437F608117D169C400B27541 /* TPArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F608017D169C400B27541 /* TPArchive.m */; };
 		437F608717D16BB800B27541 /* libTarPngMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 437F607A17D169C400B27541 /* libTarPngMac.a */; };
+		437F608A17D16E7000B27541 /* TPMultiArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 437F608817D16E7000B27541 /* TPMultiArchive.h */; };
+		437F608B17D16E7000B27541 /* TPMultiArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F608917D16E7000B27541 /* TPMultiArchive.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		437F607E17D169C400B27541 /* TarPngMac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TarPngMac-Prefix.pch"; sourceTree = "<group>"; };
 		437F607F17D169C400B27541 /* TPArchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPArchive.h; sourceTree = "<group>"; };
 		437F608017D169C400B27541 /* TPArchive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPArchive.m; sourceTree = "<group>"; };
+		437F608817D16E7000B27541 /* TPMultiArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMultiArchive.h; sourceTree = "<group>"; };
+		437F608917D16E7000B27541 /* TPMultiArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMultiArchive.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,8 @@
 		437F607C17D169C400B27541 /* TarPngMac */ = {
 			isa = PBXGroup;
 			children = (
+				437F608817D16E7000B27541 /* TPMultiArchive.h */,
+				437F608917D16E7000B27541 /* TPMultiArchive.m */,
 				437F607F17D169C400B27541 /* TPArchive.h */,
 				437F608017D169C400B27541 /* TPArchive.m */,
 				437F607D17D169C400B27541 /* Supporting Files */,
@@ -158,6 +164,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437F608A17D16E7000B27541 /* TPMultiArchive.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				437F608117D169C400B27541 /* TPArchive.m in Sources */,
+				437F608B17D16E7000B27541 /* TPMultiArchive.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
