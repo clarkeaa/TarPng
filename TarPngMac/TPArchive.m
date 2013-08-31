@@ -166,4 +166,34 @@ desiredSize:
     return self.contents.allKeys;
 }
 
+#if TARGET_OS_MAC
+-(NSImage*)imageNamed:(NSString*)name
+{
+    CGImageRef img = [self createImageNamed:name];
+    if (img) {
+        NSImage* answer = [[NSImage alloc] initWithCGImage:img
+                                                      size:NSMakeSize(CGImageGetWidth(img),
+                                                                      CGImageGetHeight(img)) ];
+        CGImageRelease(img);
+        return answer;
+    } else {
+        return nil;
+    }
+}
+#endif
+
+#if TARGET_OS_IPHONE
+-(UIImage*)imageNamed:(NSString*)name
+{
+    CGImageRef img = [self createImageNamed:name];
+    if (img) {
+        UIImage* answer = [UIImage imageWithCGImage:img];
+        CGImageRelease(img);
+        return answer;
+    } else {
+        return nil;
+    }
+}
+#endif
+
 @end

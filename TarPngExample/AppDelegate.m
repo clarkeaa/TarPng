@@ -22,12 +22,8 @@
     NSString* path = [[NSBundle mainBundle] pathForResource:@"images" ofType:@"tar"];
     TPArchive* arc = [[TPArchive alloc] initWithTAR:path];
     NSLog(@"names:%@", arc.names);
-    CGImageRef img = [arc createImageNamed:@"Mushroom2.PNG"];
-    NSImage* nsimg = [[NSImage alloc] initWithCGImage:img
-                                                 size:NSMakeSize(CGImageGetWidth(img),
-                                                                 CGImageGetHeight(img)) ];
+    NSImage* nsimg = [arc imageNamed:@"Mushroom2.PNG"];
     self.imageView.image = nsimg;
-    CGImageRelease(img);
 }
 
 @end
