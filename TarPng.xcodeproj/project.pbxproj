@@ -14,7 +14,20 @@
 		437F606B17D0F94A00B27541 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F606A17D0F94A00B27541 /* AppDelegate.m */; };
 		437F606E17D0F94A00B27541 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437F606C17D0F94A00B27541 /* MainMenu.xib */; };
 		437F607517D100FF00B27541 /* images.tar in Resources */ = {isa = PBXBuildFile; fileRef = 437F607417D100FF00B27541 /* images.tar */; };
+		437F607B17D169C400B27541 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 437F605717D0F94A00B27541 /* Cocoa.framework */; };
+		437F608117D169C400B27541 /* TPArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F608017D169C400B27541 /* TPArchive.m */; };
+		437F608717D16BB800B27541 /* libTarPngMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 437F607A17D169C400B27541 /* libTarPngMac.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		437F608517D16BB100B27541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 437F604C17D0F94A00B27541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 437F607917D169C400B27541;
+			remoteInfo = TarPngMac;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		437F605417D0F94A00B27541 /* TarPngExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TarPngExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +44,10 @@
 		437F606A17D0F94A00B27541 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		437F606D17D0F94A00B27541 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		437F607417D100FF00B27541 /* images.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; path = images.tar; sourceTree = "<group>"; };
+		437F607A17D169C400B27541 /* libTarPngMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTarPngMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		437F607E17D169C400B27541 /* TarPngMac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TarPngMac-Prefix.pch"; sourceTree = "<group>"; };
+		437F607F17D169C400B27541 /* TPArchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPArchive.h; sourceTree = "<group>"; };
+		437F608017D169C400B27541 /* TPArchive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPArchive.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +55,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437F608717D16BB800B27541 /* libTarPngMac.a in Frameworks */,
 				437F605817D0F94A00B27541 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		437F607717D169C400B27541 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				437F607B17D169C400B27541 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				437F605D17D0F94A00B27541 /* TarPngExample */,
+				437F607C17D169C400B27541 /* TarPngMac */,
 				437F605617D0F94A00B27541 /* Frameworks */,
 				437F605517D0F94A00B27541 /* Products */,
 			);
@@ -58,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				437F605417D0F94A00B27541 /* TarPngExample.app */,
+				437F607A17D169C400B27541 /* libTarPngMac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,7 +133,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		437F607C17D169C400B27541 /* TarPngMac */ = {
+			isa = PBXGroup;
+			children = (
+				437F607F17D169C400B27541 /* TPArchive.h */,
+				437F608017D169C400B27541 /* TPArchive.m */,
+				437F607D17D169C400B27541 /* Supporting Files */,
+			);
+			path = TarPngMac;
+			sourceTree = "<group>";
+		};
+		437F607D17D169C400B27541 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				437F607E17D169C400B27541 /* TarPngMac-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		437F607817D169C400B27541 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		437F605317D0F94A00B27541 /* TarPngExample */ = {
@@ -119,11 +175,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				437F608617D16BB100B27541 /* PBXTargetDependency */,
 			);
 			name = TarPngExample;
 			productName = TarPng;
 			productReference = 437F605417D0F94A00B27541 /* TarPngExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		437F607917D169C400B27541 /* TarPngMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 437F608217D169C400B27541 /* Build configuration list for PBXNativeTarget "TarPngMac" */;
+			buildPhases = (
+				437F607617D169C400B27541 /* Sources */,
+				437F607717D169C400B27541 /* Frameworks */,
+				437F607817D169C400B27541 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TarPngMac;
+			productName = TarPngMac;
+			productReference = 437F607A17D169C400B27541 /* libTarPngMac.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -147,6 +221,7 @@
 			projectRoot = "";
 			targets = (
 				437F605317D0F94A00B27541 /* TarPngExample */,
+				437F607917D169C400B27541 /* TarPngMac */,
 			);
 		};
 /* End PBXProject section */
@@ -175,7 +250,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		437F607617D169C400B27541 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				437F608117D169C400B27541 /* TPArchive.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		437F608617D16BB100B27541 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 437F607917D169C400B27541 /* TarPngMac */;
+			targetProxy = 437F608517D16BB100B27541 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		437F606017D0F94A00B27541 /* InfoPlist.strings */ = {
@@ -286,6 +377,24 @@
 			};
 			name = Release;
 		};
+		437F608317D169C400B27541 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TarPngMac/TarPngMac-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		437F608417D169C400B27541 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TarPngMac/TarPngMac-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -303,6 +412,14 @@
 			buildConfigurations = (
 				437F607217D0F94A00B27541 /* Debug */,
 				437F607317D0F94A00B27541 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		437F608217D169C400B27541 /* Build configuration list for PBXNativeTarget "TarPngMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				437F608317D169C400B27541 /* Debug */,
+				437F608417D169C400B27541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
