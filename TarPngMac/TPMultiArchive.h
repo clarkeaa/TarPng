@@ -12,10 +12,10 @@
 -(CGImageRef)createImageNamed:(NSString*)name;
 -(NSArray*)names;
 -(void)loadTAR:(NSString*)path;
-#if TARGET_OS_MAC
+#ifdef TARPNG_TARGET_MAC
 -(NSImage*)imageNamed:(NSString*)name;
 #endif
-#if TARGET_OS_IPHONE
+#ifdef TARGET_OS_IPHONE
 -(UIImage*)imageNamed:(NSString*)name;
 #endif
 @end

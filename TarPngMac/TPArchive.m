@@ -7,6 +7,7 @@
 //
 
 #import "TPArchive.h"
+#include <sys/mman.h>
 
 @interface TPArchive ()
 @property (nonatomic, retain) NSDictionary* contents;
@@ -35,6 +36,14 @@ struct TarHeader {
     char padding[12];
 };
 
+static NSString* makeNSStringUTF8(const char* str, int bufferLength)
+{
+    char temp[bufferLength + 1];
+    memset(temp, 0, sizeof(temp));
+    memcpy(temp, str, bufferLength);
+    return [NSString stringWithUTF8String:temp];
+}
+
 static NSDictionary* loadTarContents(NSString* path)
 {
     assert([[NSFileManager defaultManager] fileExistsAtPath:path]);
@@ -61,8 +70,8 @@ static NSDictionary* loadTarContents(NSString* path)
                 headerBlobSize = 0;
                 memloc += restSize;
                 headerLoc = headerBlob;
-            } else if (memloc + sizeof(struct TarHeader) >= memend) {
-                headerBlobSize = pageSize;
+            } else if (memloc + sizeof(struct TarHeader) > memend) {
+                headerBlobSize = memend - (memloc + sizeof(struct TarHeader));
                 memcpy(headerBlob, memloc, headerBlobSize);
                 memloc += headerBlobSize;
             } else {
@@ -78,15 +87,22 @@ static NSDictionary* loadTarContents(NSString* path)
                 int size = 0;
                 sscanf(sizestr, "%o", &size);
                 int totalSize = (size%512==0)?size:((size/512)+1) * 512;
-                NSString* name = [NSString stringWithUTF8String:header.name];
+                if (strlen(header.prefix) > 0) {
+
+                }
+                NSString* name =
+                        makeNSStringUTF8(header.name, sizeof(header.name));
                 if (name.length <= 0) {
                     memloc = memend;
                     foundEnd = 1;
                 } else {
+                    NSString* prefix =
+                            makeNSStringUTF8(header.prefix, sizeof(header.prefix));
                     temp[name] = @{
-                                   @"size":@(size),
-                                   @"offset":@(memloc - mem + offset),
-                                   };
+                            @"size":@(size),
+                            @"offset":@(memloc - mem + offset),
+                            @"prefix":prefix,
+                    };
                     memloc += totalSize;
                 }
             }
@@ -166,7 +182,7 @@ desiredSize:
     return self.contents.allKeys;
 }
 
-#if TARGET_OS_MAC
+#ifdef TARPNG_TARGET_MAC
 -(NSImage*)imageNamed:(NSString*)name
 {
     CGImageRef img = [self createImageNamed:name];
@@ -182,7 +198,7 @@ desiredSize:
 }
 #endif
 
-#if TARGET_OS_IPHONE
+#ifdef TARPNG_TARGET_IOS
 -(UIImage*)imageNamed:(NSString*)name
 {
     CGImageRef img = [self createImageNamed:name];

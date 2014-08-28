@@ -19,6 +19,9 @@
 		437F608717D16BB800B27541 /* libTarPngMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 437F607A17D169C400B27541 /* libTarPngMac.a */; };
 		437F608A17D16E7000B27541 /* TPMultiArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 437F608817D16E7000B27541 /* TPMultiArchive.h */; };
 		437F608B17D16E7000B27541 /* TPMultiArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F608917D16E7000B27541 /* TPMultiArchive.m */; };
+		43D9BCC719AFD9E9001E630B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D9BCC619AFD9E9001E630B /* Foundation.framework */; };
+		43D9BCEB19AFD9FC001E630B /* TPArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F608017D169C400B27541 /* TPArchive.m */; };
+		43D9BCF219AFDAEE001E630B /* TPMultiArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F608917D16E7000B27541 /* TPMultiArchive.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,18 @@
 			remoteInfo = TarPngMac;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43D9BCC319AFD9E9001E630B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		437F605417D0F94A00B27541 /* TarPngExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TarPngExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +67,14 @@
 		437F608017D169C400B27541 /* TPArchive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPArchive.m; sourceTree = "<group>"; };
 		437F608817D16E7000B27541 /* TPMultiArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMultiArchive.h; sourceTree = "<group>"; };
 		437F608917D16E7000B27541 /* TPMultiArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMultiArchive.m; sourceTree = "<group>"; };
+		43D9BCC519AFD9E9001E630B /* libTarPngIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTarPngIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D9BCC619AFD9E9001E630B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		43D9BCCA19AFD9E9001E630B /* TarPngIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TarPngIOS-Prefix.pch"; sourceTree = "<group>"; };
+		43D9BCD419AFD9E9001E630B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		43D9BCD719AFD9E9001E630B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		43D9BCDE19AFD9E9001E630B /* TarPngIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TarPngIOSTests-Info.plist"; sourceTree = "<group>"; };
+		43D9BCE019AFD9E9001E630B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43D9BCE219AFD9E9001E630B /* TarPngIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TarPngIOSTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +95,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43D9BCC219AFD9E9001E630B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D9BCC719AFD9E9001E630B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +111,8 @@
 			children = (
 				437F605D17D0F94A00B27541 /* TarPngExample */,
 				437F607C17D169C400B27541 /* TarPngMac */,
+				43D9BCC819AFD9E9001E630B /* TarPngIOS */,
+				43D9BCDC19AFD9E9001E630B /* TarPngIOSTests */,
 				437F605617D0F94A00B27541 /* Frameworks */,
 				437F605517D0F94A00B27541 /* Products */,
 			);
@@ -90,6 +123,7 @@
 			children = (
 				437F605417D0F94A00B27541 /* TarPngExample.app */,
 				437F607A17D169C400B27541 /* libTarPngMac.a */,
+				43D9BCC519AFD9E9001E630B /* libTarPngIOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				437F605717D0F94A00B27541 /* Cocoa.framework */,
+				43D9BCC619AFD9E9001E630B /* Foundation.framework */,
+				43D9BCD419AFD9E9001E630B /* XCTest.framework */,
+				43D9BCD719AFD9E9001E630B /* UIKit.framework */,
 				437F605917D0F94A00B27541 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -157,6 +194,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		43D9BCC819AFD9E9001E630B /* TarPngIOS */ = {
+			isa = PBXGroup;
+			children = (
+				43D9BCC919AFD9E9001E630B /* Supporting Files */,
+			);
+			path = TarPngIOS;
+			sourceTree = "<group>";
+		};
+		43D9BCC919AFD9E9001E630B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43D9BCCA19AFD9E9001E630B /* TarPngIOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43D9BCDC19AFD9E9001E630B /* TarPngIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				43D9BCE219AFD9E9001E630B /* TarPngIOSTests.m */,
+				43D9BCDD19AFD9E9001E630B /* Supporting Files */,
+			);
+			path = TarPngIOSTests;
+			sourceTree = "<group>";
+		};
+		43D9BCDD19AFD9E9001E630B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43D9BCDE19AFD9E9001E630B /* TarPngIOSTests-Info.plist */,
+				43D9BCDF19AFD9E9001E630B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -206,6 +277,23 @@
 			productReference = 437F607A17D169C400B27541 /* libTarPngMac.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		43D9BCC419AFD9E9001E630B /* TarPngIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D9BCE819AFD9E9001E630B /* Build configuration list for PBXNativeTarget "TarPngIOS" */;
+			buildPhases = (
+				43D9BCC119AFD9E9001E630B /* Sources */,
+				43D9BCC219AFD9E9001E630B /* Frameworks */,
+				43D9BCC319AFD9E9001E630B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TarPngIOS;
+			productName = TarPngIOS;
+			productReference = 43D9BCC519AFD9E9001E630B /* libTarPngIOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -229,6 +317,7 @@
 			targets = (
 				437F605317D0F94A00B27541 /* TarPngExample */,
 				437F607917D169C400B27541 /* TarPngMac */,
+				43D9BCC419AFD9E9001E630B /* TarPngIOS */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +355,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43D9BCC119AFD9E9001E630B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D9BCF219AFDAEE001E630B /* TPMultiArchive.m in Sources */,
+				43D9BCEB19AFD9FC001E630B /* TPArchive.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -299,6 +397,14 @@
 				437F606D17D0F94A00B27541 /* en */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		43D9BCDF19AFD9E9001E630B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43D9BCE019AFD9E9001E630B /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -390,6 +496,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TarPngMac/TarPngMac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TARPNG_TARGET_MAC=1",
+					"DEBUG=1",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -399,7 +509,63 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TarPngMac/TarPngMac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = TARPNG_TARGET_MAC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		43D9BCE419AFD9E9001E630B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DSTROOT = /tmp/TarPngIOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TarPngIOS/TarPngIOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TARPNG_TARGET_IOS=1",
+					"DEBUG=1",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		43D9BCE519AFD9E9001E630B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DSTROOT = /tmp/TarPngIOS.dst;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TarPngIOS/TarPngIOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = TARPNG_TARGET_IOS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -422,12 +588,22 @@
 				437F607317D0F94A00B27541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		437F608217D169C400B27541 /* Build configuration list for PBXNativeTarget "TarPngMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				437F608317D169C400B27541 /* Debug */,
 				437F608417D169C400B27541 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D9BCE819AFD9E9001E630B /* Build configuration list for PBXNativeTarget "TarPngIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D9BCE419AFD9E9001E630B /* Debug */,
+				43D9BCE519AFD9E9001E630B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

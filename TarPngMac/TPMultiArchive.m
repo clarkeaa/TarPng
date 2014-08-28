@@ -54,7 +54,7 @@
     [archive release];
 }
 
-#if TARGET_OS_MAC
+#ifdef TARPNG_TARGET_MAC
 -(NSImage*)imageNamed:(NSString*)name
 {
     CGImageRef img = [self createImageNamed:name];
@@ -70,7 +70,7 @@
 }
 #endif
 
-#if TARGET_OS_IPHONE
+#ifdef TARPNG_TARGET_IOS
 -(UIImage*)imageNamed:(NSString*)name
 {
     CGImageRef img = [self createImageNamed:name];
